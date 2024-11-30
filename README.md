@@ -1,6 +1,6 @@
 # 30-11-2024-report
 
-Topic 1:
+**Topic 1:**
 
 Theo góc nhìn của em thì em có đưa ra một số góc nhìn khách quan như sau:
 
@@ -13,6 +13,6 @@ Dưới góc nhìn của user:
 
 
 
+**Ba công việc AI muốn tham gia trong dự án:**
 
-Ba công việc AI muốn tham gia trong dự án:
 - 
