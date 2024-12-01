@@ -44,27 +44,60 @@ Các giải pháp research.
 
 
 
-# TIÊU CHÍ ĐÁNH GIÁ 
+# Đánh giá các giải pháp nhận diện nhịp điệu trong âm nhạc
 
+## Tiêu chí đánh giá
+1. **Hiệu quả phân tích nhịp điệu (Accuracy)**: Độ chính xác trong việc phát hiện beat và downbeat.
+2. **Tính linh hoạt (Scalability)**: Mức độ phù hợp khi áp dụng trên các thiết bị khác nhau (Mobile, Hardware).
+3. **Thời gian triển khai (Implementation Time)**: Độ phức tạp và thời gian cần thiết để triển khai.
+4. **Hiệu suất thời gian thực (Real-Time Processing)**: Khả năng hoạt động theo thời gian thực.
+5. **Tính đổi mới (Innovative Approach)**: Ứng dụng công nghệ mới và sáng tạo.
 
-## Hiệu quả phân tích nhịp điệu (Accuracy)
-- **Độ chính xác** khi phát hiện beat và downbeat.
-- **Khả năng hoạt động tốt** với đa dạng thể loại âm nhạc.
+## Bảng đánh giá chi tiết
 
-## Tính linh hoạt (Scalability)
-- **Mức độ phù hợp** khi áp dụng vào các thiết bị khác nhau (Mobile, Hardware).
-- **Khả năng mở rộng** với các ứng dụng âm nhạc thực tế.
+| **Giải pháp**      | **Hiệu quả (Accuracy)** | **Tính linh hoạt (Scalability)** | **Thời gian triển khai** | **Thời gian thực** | **Tính đổi mới** | **Tổng điểm** |
+|---------------------|-------------------------|-----------------------------------|--------------------------|--------------------|------------------|---------------|
+| **Madmom**         | 8/10                   | 7/10                              | 7/10                     | 8/10               | 7/10             | 37/50         |
+| **Beat Transformer** | 9/10                   | 8/10                              | 6/10                     | 8/10               | 9/10             | 40/50         |
+| **BeatNet**         | 7/10                   | 8/10                              | 8/10                     | 7/10               | 8/10             | 38/50         |
 
-## Thời gian triển khai (Implementation Time)
-- **Độ phức tạp** của mô hình và thời gian cần để triển khai.
-- **Cấu hình cần thiết** cho việc triển khai trên thiết bị.
+## Phân tích chi tiết
 
-## Hiệu suất thời gian thực (Real-Time Processing)
-- **Mô hình** có thể hoạt động theo thời gian thực hay không.
+### 1. Beat Transformer *(40/50 - Xếp hạng 1)*
+- **Hiệu quả (9/10)**:  
+  Cơ chế self-attention giúp mô hình nhận diện chính xác beat và downbeat trên các chuỗi âm thanh dài, vượt trội hơn so với các mô hình truyền thống.  
+- **Tính linh hoạt (8/10)**:  
+  Hoạt động tốt trên phần cứng hiện đại nhưng yêu cầu tài nguyên cao, gây khó khăn khi triển khai trên thiết bị hạn chế.  
+- **Thời gian triển khai (6/10)**:  
+  Cấu trúc phức tạp đòi hỏi thời gian và chuyên môn cao để tích hợp đầy đủ.  
+- **Thời gian thực (8/10)**:  
+  Khả năng xử lý gần thời gian thực với hiệu suất cao nhưng cần phần cứng mạnh.  
+- **Tính đổi mới (9/10)**:  
+  Ứng dụng Transformer trong lĩnh vực âm nhạc là bước tiến đột phá.
 
-## Tính đổi mới và công nghệ (Innovative Approach)
-- **Các phương pháp** và kiến trúc mới được áp dụng.
+### 2. BeatNet *(38/50 - Xếp hạng 2)*
+- **Hiệu quả (7/10)**:  
+  Sử dụng phân tách nguồn và tăng cường dữ liệu, phù hợp với âm nhạc có cấu trúc đơn giản.  
+- **Tính linh hoạt (8/10)**:  
+  Tối ưu hóa tốt cho các thiết bị phổ thông và di động.  
+- **Thời gian triển khai (8/10)**:  
+  Cấu trúc đơn giản hơn giúp triển khai nhanh hơn so với Beat Transformer.  
+- **Thời gian thực (7/10)**:  
+  Hoạt động ổn định trong thời gian thực, nhưng bị giới hạn khi xử lý nhạc phức tạp.  
+- **Tính đổi mới (8/10)**:  
+  Áp dụng sáng tạo phân tách nguồn và tăng cường dữ liệu.
 
+### 3. Madmom *(37/50 - Xếp hạng 3)*
+- **Hiệu quả (8/10)**:  
+  Sử dụng HMM và RNN giúp đạt độ chính xác ổn định, nhưng khó xử lý dữ liệu phức tạp như các phương pháp mới hơn.  
+- **Tính linh hoạt (7/10)**:  
+  Phù hợp với thiết bị hạn chế nhưng không tối ưu cho các ứng dụng hiện đại.  
+- **Thời gian triển khai (7/10)**:  
+  Thiết kế đơn giản, dễ tích hợp vào các dự án nghiên cứu hoặc thử nghiệm ban đầu.  
+- **Thời gian thực (8/10)**:  
+  Hoạt động tốt trong thời gian thực với dữ liệu âm thanh cơ bản.  
+- **Tính đổi mới (7/10)**:  
+  Là giải pháp đáng tin cậy nhưng công nghệ không còn tiên tiến.
 
 
 
