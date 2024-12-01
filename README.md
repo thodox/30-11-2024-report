@@ -21,8 +21,11 @@ Dưới góc nhìn của user:
 
 -  Phát triển hệ thống tạo nhạc tự động (Music Generation).
 
-**  Topic 2**
+**Topic 2**
 
 Các giải pháp research.
 
--  
+-  **Madmom**: Sử dụng các thuật toán như Hidden Markov Models (HMM) và Recurrent Neural Networks (RNN) để phân tích và nhận diện nhịp điệu trong âm nhạc. HMM, một mô hình xác suất, được dùng để phân loại tín hiệu âm thanh thành các trạng thái beat và non-beat, trong khi RNN, đặc biệt là các biến thể như LSTM và GRU, giúp phân tích các chuỗi âm thanh và nhận diện các mẫu nhịp điệu qua thời gian. Quá trình xử lý của Madmom bao gồm việc chuyển đổi tín hiệu âm thanh thành các đặc trưng như Spectrogram hoặc Chromagram, sau đó áp dụng HMM hoặc RNN để phát hiện beat và downbeat.
+-  link git và paper:
+
+-  **Beat Transformer**: 
