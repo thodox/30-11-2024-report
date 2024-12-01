@@ -41,3 +41,50 @@ Các giải pháp research.
 - Kết hợp phân tách nguồn (source separation) và tăng cường dữ liệu (data augmentation). Phương pháp này bao gồm việc sử dụng các stem nhạc cụ (như trống) được tách ra từ bản mix gốc để cải thiện hiệu quả của mô hình khi xử lý beat và downbeat. Cụ thể, dữ liệu đầu vào được chia thành nhiều loại khác nhau, bao gồm cả phần trống và không phải trống, từ đó mô hình học được cách xử lý thông tin trong các trường hợp có hoặc không có âm trống.
 - git: https://github.com/mjhydri/beatnet
 - paper: https://arxiv.org/abs/2108.03576
+
+
+
+**TIÊU CHÍ ĐÁNH GIÁ**
+
+
+## Hiệu quả phân tích nhịp điệu (Accuracy)
+- **Độ chính xác** khi phát hiện beat và downbeat.
+- **Khả năng hoạt động tốt** với đa dạng thể loại âm nhạc.
+
+## Tính linh hoạt (Scalability)
+- **Mức độ phù hợp** khi áp dụng vào các thiết bị khác nhau (Mobile, Hardware).
+- **Khả năng mở rộng** với các ứng dụng âm nhạc thực tế.
+
+## Thời gian triển khai (Implementation Time)
+- **Độ phức tạp** của mô hình và thời gian cần để triển khai.
+- **Cấu hình cần thiết** cho việc triển khai trên thiết bị.
+
+## Hiệu suất thời gian thực (Real-Time Processing)
+- **Mô hình** có thể hoạt động theo thời gian thực hay không.
+
+## Tính đổi mới và công nghệ (Innovative Approach)
+- **Các phương pháp** và kiến trúc mới được áp dụng.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
