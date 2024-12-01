@@ -1,6 +1,28 @@
 # 30-11-2024-report
 
-**Topic 1:**
+# Topic 1:
+**Simpia** là một ứng dụng giáo dục tiên tiến được thiết kế để giúp người dùng học chơi piano nhanh chóng và hiệu quả. Ứng dụng sử dụng công nghệ AI để hỗ trợ học tập, cung cấp các khóa học từ cơ bản đến nâng cao, và mang lại trải nghiệm cá nhân hóa cho từng người dùng.
+
+---
+
+## **Tính năng chính**
+
+1. **Học piano toàn diện**:
+   - Cung cấp các bài học về nốt nhạc, hợp âm, và cách chơi các bài hát.
+   - Phù hợp cho người mới bắt đầu và người chơi nâng cao.
+
+2. **Phản hồi thời gian thực với AI**:
+   - Công nghệ AI phân tích và đánh giá kỹ năng chơi piano.
+   - Đưa ra phản hồi cụ thể giúp cải thiện cách chơi.
+
+3. **Thư viện bài học phong phú**:
+   - Hàng trăm bài học và khóa học được cập nhật thường xuyên. Có thể chơi các bài nhạc bằng cách liên kết API với youtube
+
+4. **Giao diện thân thiện**:
+   - Thiết kế đơn giản, trực quan, dễ sử dụng.
+
+5. **Tùy chọn nâng cấp Premium**:
+   - Mở khóa các khóa học độc quyền và nội dung nâng cao với gói trả phí.
 
 Theo góc nhìn của em thì em có đưa ra một số góc nhìn khách quan như sau:
 
@@ -10,7 +32,7 @@ Dưới góc nhìn của user:
 
 - Thêm chế độ bỏ qua luyện tập nếu như người dùng đã biết về một mức lưng chừng nào đó. (ví dụ như task1 về các âm người dùng đã biết thì có thể cho người dùng pass qua để tới phần tiếp theo như task2 nếu như người dùng không muốn luyện tập lại mà học tiếp nhưng phần chưa biết).
 
-- Có thể mở rộng thêm một vài phần miễn phí để thu hút người dùng hơn hoặc hỗ trợ cộng đồng và học tập nhóm (phòng riêng).
+- Tăng tính tương tác và cộng đồng: Hiện ứng dụng chưa đề cập đến chức năng kết nối giữa các người dùng (như diễn đàn hoặc nhóm học trực tuyến). Bổ sung tính năng này sẽ giúp tăng cường động lực học tập thông qua việc chia sẻ và học hỏi kinh nghiệm từ cộng đồng
 
 
 **Ba công việc AI muốn tham gia trong dự án:**
@@ -21,13 +43,13 @@ Dưới góc nhìn của user:
 
 -  Phát triển hệ thống tạo nhạc tự động (Music Generation).
 
-**Topic 2**
+# Topic 2
 
 Các giải pháp research.
 
   **Madmom**: 
   - Sử dụng các thuật toán như Hidden Markov Models (HMM) và Recurrent Neural Networks (RNN) để phân tích và nhận diện nhịp điệu trong âm nhạc. HMM, một mô hình xác suất, được dùng để phân loại tín hiệu âm thanh thành các trạng thái beat và non-beat, trong khi RNN, đặc biệt là các biến thể như LSTM và GRU, giúp phân tích các chuỗi âm thanh và nhận diện các mẫu nhịp điệu qua thời gian. Quá trình xử lý của Madmom bao gồm việc chuyển đổi tín hiệu âm thanh thành các đặc trưng như Spectrogram hoặc Chromagram, sau đó áp dụng HMM hoặc RNN để phát hiện beat và downbeat.
--  link git và paper:
+-  link git và paper: https://github.com/CPJKU/madmom.git
 
  **Beat Transformer**: 
  
