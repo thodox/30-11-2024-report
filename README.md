@@ -53,7 +53,7 @@ Các giải pháp research.
 4. **Hiệu suất thời gian thực (Real-Time Processing)**: Khả năng hoạt động theo thời gian thực.
 5. **Tính đổi mới (Innovative Approach)**: Ứng dụng công nghệ mới và sáng tạo.
 
-## Bảng đánh giá chi tiết
+## Bảng đánh giá khách quan
 
 | **Giải pháp**      | **Hiệu quả (Accuracy)** | **Tính linh hoạt (Scalability)** | **Thời gian triển khai** | **Thời gian thực** | **Tính đổi mới** | **Tổng điểm** |
 |---------------------|-------------------------|-----------------------------------|--------------------------|--------------------|------------------|---------------|
