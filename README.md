@@ -122,7 +122,7 @@ Sử dụng thư viện **librosa** và mã nguồn mở **madmom** để thực
 
 ### Kịch bản
 **1. File Âm Thanh**
-Chuẩn bị 1 file âm thanh cần checking.
+Chuẩn bị 1 file âm thanh cần tracking.
 
 **2. Tiền Xử Lý Dữ Liệu với librosa**
 
@@ -149,14 +149,19 @@ Kết quả: RNNBeatProcessor sẽ xác định các vị trí trong tín hiệu
 Quá trình nhận diện: Mô hình học cách nhận diện các downbeats bằng cách tìm kiếm sự tăng trưởng đột ngột trong năng lượng âm thanh tại các điểm đầu của mỗi chu kỳ nhịp. Những downbeats này có sự khác biệt rõ rệt so với các beats khác.
 
 Kết quả: RNNDownBeatProcessor sẽ xác định chính xác vị trí của các downbeats trong tín hiệu âm thanh. Những downbeats này sẽ được đánh dấu rõ ràng và có thể được sử dụng trong các phân tích âm nhạc chi tiết hơn.
+
 **4. Vẽ Biểu Đồ**
 
 Biểu đồ 1: Hiển thị tín hiệu âm thanh gốc mà không có bất kỳ đánh dấu nào.
+
 Biểu đồ 2: Hiển thị tín hiệu âm thanh với các beats được đánh dấu (đường thẳng đỏ để đánh dấu beats).
+
 Biểu đồ 3: Hiển thị tín hiệu âm thanh với các downbeats được đánh dấu (đường thẳng xanh để đánh dấu downbeats).
 
 
 
+
+# Kết quả đạt được.
 
 
 
