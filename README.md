@@ -117,33 +117,44 @@ Các giải pháp research.
 
 
 ## Mô tả
-Kịch bản này hướng dẫn cách tiền xử lý dữ liệu âm thanh, sử dụng thư viện **librosa** và **madmom** để thực hiện tracking beats và downbeats trong âm nhạc, sau đó trực quan hóa kết quả và lưu lại file âm thanh đã được xử lý.
+Sử dụng thư viện **librosa** và mã nguồn mở **madmom** để thực hiện tracking beats và downbeats trong file audio piano, sau đó trực quan hóa kết quả và lưu lại file piano  đã được xử lý.
 
-## Các bước triển khai
 
-### 1. Chuẩn bị File Âm Thanh
-Trước tiên, bạn cần có một file âm thanh piano ở định dạng `.wav` hoặc các định dạng âm thanh phổ biến khác. Đây là file sẽ được sử dụng cho toàn bộ quá trình phân tích.
+### Kịch bản
+**1. File Âm Thanh**
+Chuẩn bị 1 file âm thanh cần checking.
 
-### 2. Tiền Xử Lý Dữ Liệu với librosa
-- **librosa** sẽ được sử dụng để đọc và tiền xử lý dữ liệu âm thanh. Cụ thể:
-  - Đọc file âm thanh và chuyển đổi nó thành tín hiệu sóng (waveform).
-  - Trích xuất các đặc trưng âm thanh cần thiết như Mel-frequency cepstral coefficients (MFCCs), hoặc các đặc trưng khác nếu cần.
+**2. Tiền Xử Lý Dữ Liệu với librosa**
 
-### 3. Tracking Beats và Downbeats với madmom
-- Sử dụng **madmom** để thực hiện tracking beats và downbeats:
-  - **RNNBeatProcessor** của madmom sẽ giúp xác định vị trí của các beats (nhịp).
-  - **RNNDownBeatProcessor** sẽ giúp xác định các downbeats (nhịp phụ) trong âm nhạc.
+Đọc File Âm Thanh: Sử dụng librosa.load() để đọc file âm thanh vào dưới dạng tín hiệu sóng (waveform).
 
-### 4. Vẽ Biểu Đồ
-Sau khi tracking được beats và downbeats, bạn sẽ vẽ ba biểu đồ để trực quan hóa kết quả:
-- **Biểu đồ 1**: Hiển thị tín hiệu âm thanh gốc mà không có tracking.
-- **Biểu đồ 2**: Hiển thị tín hiệu âm thanh đã được đánh dấu beats (đường thẳng đỏ để đánh dấu beats).
-- **Biểu đồ 3**: Hiển thị tín hiệu âm thanh đã được đánh dấu downbeats (đường thẳng xanh để đánh dấu downbeats).
+Trích Xuất Các Đặc Trưng Âm Thanh: Sau khi đọc tín hiệu âm thanh, bạn sẽ trích xuất các đặc trưng như MFCCs (Mel-frequency cepstral coefficients) hoặc chroma features. Những đặc trưng này cung cấp thông tin về cấu trúc âm nhạc, đặc biệt là giúp nhận diện các điểm mạnh của beat và downbeat.
 
-### 5. Xuất File Âm Thanh Kết Quả
-Cuối cùng, bạn sẽ tạo một file âm thanh mới chứa thông tin về các beats và downbeats:
-- File âm thanh kết quả sẽ chứa âm thanh gốc cùng với các thông tin về beats và downbeats.
-- File này có thể được lưu lại dưới dạng `.wav` hoặc định dạng âm thanh khác để sử dụng trong các ứng dụng nhận diện nhịp điệu hoặc phân tích âm nhạc.
+**3. Tracking Beats và Downbeats với madmom**
+
+Sử dụng madmom để thực hiện tracking beats và downbeats, với hai bộ xử lý chính: **RNNBeatProcessor** và **RNNDownBeatProcessor.**
+
+**RNNBeatProcessor – Nhận diện Beat**
+
+Đầu vào: Tín hiệu âm thanh được chuyển đổi thành các đặc trưng như spectrogram hoặc chroma features. Những đặc trưng này giúp mô hình nhận diện sự thay đổi trong âm thanh, đặc biệt là những điểm mạnh liên quan đến beats.RNN (Recurrent Neural Network): Mô hình sử dụng mạng nơ-ron hồi tiếp (RNN) để phân tích tín hiệu âm thanh theo chuỗi thời gian. RNN giúp mô hình học được cách nhận diện các beats dựa trên các thay đổi trong tín hiệu âm thanh theo thời gian.
+
+Quá trình nhận diện: Mô hình học cách nhận diện các beats bằng cách quan sát sự thay đổi đột ngột trong năng lượng hoặc các đặc trưng âm thanh khác. Mỗi frame tín hiệu sẽ được đánh giá dựa trên thông tin từ các frame trước đó, giúp nhận diện chính xác các beats trong âm nhạc.
+Kết quả: RNNBeatProcessor sẽ xác định các vị trí trong tín hiệu âm thanh mà ở đó có beats. Các beats này thường xuất hiện đều đặn, và mô hình có thể đánh dấu chính xác các điểm này trong tín hiệu âm thanh.
+
+
+**RNNDownBeatProcessor – Nhận diện Downbeat**
+
+Đầu vào: Giống như RNNBeatProcessor, tín hiệu âm thanh sẽ được chuyển đổi thành các đặc trưng như spectrogram hoặc chroma features. Tuy nhiên, với downbeats, mô hình cần nhận diện những điểm đặc biệt đầu tiên của mỗi chu kỳ nhịp (downbeats), thường là những điểm mạnh nhất trong mỗi bar.RNN (Recurrent Neural Network): RNNDownBeatProcessor sử dụng RNN để phân tích các đặc trưng âm thanh theo thời gian. Mục tiêu là nhận diện các downbeats, là các beats đầu tiên và mạnh nhất trong mỗi chu kỳ nhịp.
+
+Quá trình nhận diện: Mô hình học cách nhận diện các downbeats bằng cách tìm kiếm sự tăng trưởng đột ngột trong năng lượng âm thanh tại các điểm đầu của mỗi chu kỳ nhịp. Những downbeats này có sự khác biệt rõ rệt so với các beats khác.
+
+Kết quả: RNNDownBeatProcessor sẽ xác định chính xác vị trí của các downbeats trong tín hiệu âm thanh. Những downbeats này sẽ được đánh dấu rõ ràng và có thể được sử dụng trong các phân tích âm nhạc chi tiết hơn.
+**4. Vẽ Biểu Đồ**
+
+Biểu đồ 1: Hiển thị tín hiệu âm thanh gốc mà không có bất kỳ đánh dấu nào.
+Biểu đồ 2: Hiển thị tín hiệu âm thanh với các beats được đánh dấu (đường thẳng đỏ để đánh dấu beats).
+Biểu đồ 3: Hiển thị tín hiệu âm thanh với các downbeats được đánh dấu (đường thẳng xanh để đánh dấu downbeats).
+
 
 
 
