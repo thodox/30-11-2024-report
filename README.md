@@ -105,9 +105,45 @@ Các giải pháp research.
 
 # Triển khai
 
+**Librosa** là một thư viện Python phổ biến dành cho xử lý và phân tích tín hiệu âm thanh, đặc biệt là âm nhạc. Thư viện này cung cấp các công cụ mạnh mẽ để trích xuất đặc trưng âm thanh như Mel-frequency cepstral coefficients (MFCC), spectrograms, pitch, tempo, và nhiều yếu tố khác, giúp các nhà nghiên cứu và lập trình viên trong các ứng dụng như nhận dạng giọng nói, phân tích âm nhạc và học máy. Librosa cũng hỗ trợ việc tải và xử lý các tệp âm thanh từ nhiều định dạng phổ biến.
+
+**Madmom** là một mã nguồn mở trong Python mạnh mẽ dành cho xử lý và phân tích âm nhạc, đặc biệt trong các bài toán nhận dạng nhịp điệu, phân đoạn âm nhạc và phân loại âm nhạc. Mã nguồn này áp dụng các công nghệ học máy và học sâu (deep learning), bao gồm mạng nơ-ron convolutional (CNNs) để nhận dạng nhịp điệu và phân đoạn âm nhạc. Ngoài ra, Madmom còn sử dụng các mô hình Hidden Markov Models (HMMs) để cải thiện khả năng phân loại và dự đoán các yếu tố trong tín hiệu âm nhạc, như nhận dạng tempo và onset. Madmom cũng cung cấp các mô hình đã được huấn luyện sẵn, giúp tiết kiệm thời gian khi triển khai các ứng dụng phân tích âm nhạc
 
 
 
+
+
+
+
+
+## Mô tả
+Kịch bản này hướng dẫn cách tiền xử lý dữ liệu âm thanh, sử dụng thư viện **librosa** và **madmom** để thực hiện tracking beats và downbeats trong âm nhạc, sau đó trực quan hóa kết quả và lưu lại file âm thanh đã được xử lý.
+
+## Các bước triển khai
+
+### 1. Chuẩn bị File Âm Thanh
+Trước tiên, bạn cần có một file âm thanh piano ở định dạng `.wav` hoặc các định dạng âm thanh phổ biến khác. Đây là file sẽ được sử dụng cho toàn bộ quá trình phân tích.
+
+### 2. Tiền Xử Lý Dữ Liệu với librosa
+- **librosa** sẽ được sử dụng để đọc và tiền xử lý dữ liệu âm thanh. Cụ thể:
+  - Đọc file âm thanh và chuyển đổi nó thành tín hiệu sóng (waveform).
+  - Trích xuất các đặc trưng âm thanh cần thiết như Mel-frequency cepstral coefficients (MFCCs), hoặc các đặc trưng khác nếu cần.
+
+### 3. Tracking Beats và Downbeats với madmom
+- Sử dụng **madmom** để thực hiện tracking beats và downbeats:
+  - **RNNBeatProcessor** của madmom sẽ giúp xác định vị trí của các beats (nhịp).
+  - **RNNDownBeatProcessor** sẽ giúp xác định các downbeats (nhịp phụ) trong âm nhạc.
+
+### 4. Vẽ Biểu Đồ
+Sau khi tracking được beats và downbeats, bạn sẽ vẽ ba biểu đồ để trực quan hóa kết quả:
+- **Biểu đồ 1**: Hiển thị tín hiệu âm thanh gốc mà không có tracking.
+- **Biểu đồ 2**: Hiển thị tín hiệu âm thanh đã được đánh dấu beats (đường thẳng đỏ để đánh dấu beats).
+- **Biểu đồ 3**: Hiển thị tín hiệu âm thanh đã được đánh dấu downbeats (đường thẳng xanh để đánh dấu downbeats).
+
+### 5. Xuất File Âm Thanh Kết Quả
+Cuối cùng, bạn sẽ tạo một file âm thanh mới chứa thông tin về các beats và downbeats:
+- File âm thanh kết quả sẽ chứa âm thanh gốc cùng với các thông tin về beats và downbeats.
+- File này có thể được lưu lại dưới dạng `.wav` hoặc định dạng âm thanh khác để sử dụng trong các ứng dụng nhận diện nhịp điệu hoặc phân tích âm nhạc.
 
 
 
