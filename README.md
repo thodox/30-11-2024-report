@@ -10,9 +10,19 @@ Dưới góc nhìn của user:
 
 - Thêm chế độ bỏ qua luyện tập nếu như người dùng đã biết về một mức lưng chừng nào đó. (ví dụ như task1 về các âm người dùng đã biết thì có thể cho người dùng pass qua để tới phần tiếp theo như task2 nếu như người dùng không muốn luyện tập lại mà học tiếp nhưng phần chưa biết).
 
-
+- Có thể mở rộng thêm một vài phần miễn phí để thu hút người dùng hơn hoặc hỗ trợ cộng đồng và học tập nhóm (phòng riêng).
 
 
 **Ba công việc AI muốn tham gia trong dự án:**
 
-- 
+- Phát triển hệ thống gợi ý cá nhân hóa (Personalized Learning System): Thu thập dữ liệu chơi cá nhân của người dùng dựa trên số nốt đã chơi, sự sai số, lịch sử luyện tập, thời gian chơi,... để có thể phát ra điểm yếu từ đó gợi ý và cung cấp lộ trình học tập phù hợp với trình độ và tiến độ của từng người dùng.
+
+-  Xây dựng một AI - người thầy hướng dẫn học nhạc và tích hợp feedback.
+
+-  Phát triển hệ thống tạo nhạc tự động (Music Generation).
+
+**  Topic 2**
+
+Các giải pháp research.
+
+-  
