@@ -185,9 +185,19 @@ Biểu đồ 3: Hiển thị tín hiệu âm thanh với các downbeats được
 
 # Kết quả đạt được.
 
+Link code: https://colab.research.google.com/drive/1BjsztGQ3Ig-JsJGQHO0kTHWaZ08jM0NP?usp=sharing
+
 Có sự đụng độ về thư viện trong madmom, em đang cố gắng fix lỗi. Theo như em research thì lỗi đang gặp phải là do thư viện madmom đang sử dụng kiểu dữ liệu np.float, nhưng kiểu này đã bị loại bỏ trong NumPy phiên bản 1.20 và các phiên bản mới hơn.  Mặc dù đã hạ phiên bản xuống 1.19.0 nhưng vẫn lỗi không thể hoàn thành tải mã nguồn mở/thư viện madmom xuống và sử dụng nó.
 
 ![image](https://github.com/user-attachments/assets/4c064b61-f0b6-44f8-9fa0-927ca40a81f3)
+
+Thì bên cạnh đó thì em sử dụng librosa riêng (không kết hợp với madmom) thì nó có tracking được beat (downbeat thì cần phải sử dụng thêm madmom để xác định nhưng hiện tại em chưa fix lỗi hoàn tất). Em có code và chạy thử thì ra kết quả như sau:
+
+![image](https://github.com/user-attachments/assets/661e132e-664d-4bf8-b799-230d07f2b301)
+
+![image](https://github.com/user-attachments/assets/7565684e-5330-4f31-8a74-c755c628b1a8)
+
+
 
 
 
