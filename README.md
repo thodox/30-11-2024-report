@@ -25,7 +25,19 @@ Dưới góc nhìn của user:
 
 Các giải pháp research.
 
--  **Madmom**: Sử dụng các thuật toán như Hidden Markov Models (HMM) và Recurrent Neural Networks (RNN) để phân tích và nhận diện nhịp điệu trong âm nhạc. HMM, một mô hình xác suất, được dùng để phân loại tín hiệu âm thanh thành các trạng thái beat và non-beat, trong khi RNN, đặc biệt là các biến thể như LSTM và GRU, giúp phân tích các chuỗi âm thanh và nhận diện các mẫu nhịp điệu qua thời gian. Quá trình xử lý của Madmom bao gồm việc chuyển đổi tín hiệu âm thanh thành các đặc trưng như Spectrogram hoặc Chromagram, sau đó áp dụng HMM hoặc RNN để phát hiện beat và downbeat.
+  **Madmom**: 
+  - Sử dụng các thuật toán như Hidden Markov Models (HMM) và Recurrent Neural Networks (RNN) để phân tích và nhận diện nhịp điệu trong âm nhạc. HMM, một mô hình xác suất, được dùng để phân loại tín hiệu âm thanh thành các trạng thái beat và non-beat, trong khi RNN, đặc biệt là các biến thể như LSTM và GRU, giúp phân tích các chuỗi âm thanh và nhận diện các mẫu nhịp điệu qua thời gian. Quá trình xử lý của Madmom bao gồm việc chuyển đổi tín hiệu âm thanh thành các đặc trưng như Spectrogram hoặc Chromagram, sau đó áp dụng HMM hoặc RNN để phát hiện beat và downbeat.
 -  link git và paper:
 
--  **Beat Transformer**: 
+ **Beat Transformer**: 
+ 
+ - Là một mô hình học sâu được thiết kế để nhận diện beat và downbeat trong âm nhạc, sử dụng kiến trúc Transformer kết hợp với các thuật toán tiên tiến như Convolutional Neural Networks (CNN) và Long Short-Term Memory (LSTM). Tín hiệu âm thanh ban đầu được chuyển đổi thành các đặc trưng như Spectrogram hoặc Chromagram, sau đó mô hình sử dụng cơ chế self-attention trong Transformer để học và nhận diện các mối quan hệ giữa các phần xa nhau trong chuỗi âm thanh mà không cần phải xử lý tuần tự như các mô hình RNN truyền thống. Điều này giúp mô hình có thể nhận diện chính xác các điểm beat và downbeat, đồng thời cải thiện hiệu suất so với các phương pháp trước đây. Các CNN được sử dụng để trích xuất các đặc trưng không gian từ tín hiệu âm thanh, trong khi LSTM giúp giữ lại thông tin dài hạn của nhịp điệu qua thời gian. Kết quả là Beat Transformer có thể nhận diện beat và downbeat một cách chính xác
+ - Git: https://github.com/zhaojw1998/Beat-Transformer.git
+   
+ - paper: https://arxiv.org/abs/2209.07140
+
+**BeatNet**
+
+- Kết hợp phân tách nguồn (source separation) và tăng cường dữ liệu (data augmentation). Phương pháp này bao gồm việc sử dụng các stem nhạc cụ (như trống) được tách ra từ bản mix gốc để cải thiện hiệu quả của mô hình khi xử lý beat và downbeat. Cụ thể, dữ liệu đầu vào được chia thành nhiều loại khác nhau, bao gồm cả phần trống và không phải trống, từ đó mô hình học được cách xử lý thông tin trong các trường hợp có hoặc không có âm trống.
+- git: https://github.com/mjhydri/beatnet
+- paper: https://arxiv.org/abs/2108.03576
