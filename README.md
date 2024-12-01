@@ -35,13 +35,13 @@ Dưới góc nhìn của user:
 - Tăng tính tương tác và cộng đồng: Hiện ứng dụng chưa đề cập đến chức năng kết nối giữa các người dùng (như diễn đàn hoặc nhóm học trực tuyến). Bổ sung tính năng này sẽ giúp tăng cường động lực học tập thông qua việc chia sẻ và học hỏi kinh nghiệm từ cộng đồng
 
 
-**Ba công việc AI muốn tham gia trong dự án:**
+**Ba công việc AI mà em muốn tham gia trong dự án:**
 
 - Phát triển hệ thống gợi ý cá nhân hóa (Personalized Learning System): Thu thập dữ liệu chơi cá nhân của người dùng dựa trên số nốt đã chơi, sự sai số, lịch sử luyện tập, thời gian chơi,... để có thể phát ra điểm yếu từ đó gợi ý và cung cấp lộ trình học tập phù hợp với trình độ và tiến độ của từng người dùng.
 
--  Xây dựng một AI - người thầy hướng dẫn học nhạc và tích hợp feedback.
+-  Xây dựng một AI - người thầy hướng dẫn học nhạc và tích hợp feedback: AI này sẽ đóng vai trò như một người thầy nhạc, cung cấp phản hồi thời gian thực cho người dùng khi họ chơi nhạc. Phản hồi này sẽ giúp người học nhận ra lỗi và cải thiện kỹ năng, giống như có một giáo viên hướng dẫn trực tiếp.
 
--  Phát triển hệ thống tạo nhạc tự động (Music Generation).
+-  Phát triển hệ thống tạo nhạc tự động (Music Generation): Hệ thống này cho phép người dùng sáng tạo nhạc tự động, tạo ra giai điệu, hợp âm, hoặc thậm chí các bản nhạc hoàn chỉnh dựa trên tiêu chí người dùng chọn, giúp người học hiểu và thực hành các nguyên tắc sáng tạo trong âm nhạc.
 
 # Topic 2
 
