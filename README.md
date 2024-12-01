@@ -44,7 +44,7 @@ Các giải pháp research.
 
 
 
-**TIÊU CHÍ ĐÁNH GIÁ**
+# TIÊU CHÍ ĐÁNH GIÁ 
 
 
 ## Hiệu quả phân tích nhịp điệu (Accuracy)
