@@ -185,6 +185,9 @@ Biểu đồ 3: Hiển thị tín hiệu âm thanh với các downbeats được
 
 # Kết quả đạt được.
 
+Có sự đụng độ về thư viện trong madmom, em đang cố gắng fix lỗi. Theo như em research thì lỗi đang gặp phải là do thư viện madmom đang sử dụng kiểu dữ liệu np.float, nhưng kiểu này đã bị loại bỏ trong NumPy phiên bản 1.20 và các phiên bản mới hơn.  Mặc dù đã hạ phiên bản xuống 1.19.0 nhưng vẫn lỗi không thể hoàn thành tải mã nguồn mở/thư viện madmom xuống và sử dụng nó.
+
+![image](https://github.com/user-attachments/assets/4c064b61-f0b6-44f8-9fa0-927ca40a81f3)
 
 
 
