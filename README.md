@@ -191,13 +191,17 @@ Có sự đụng độ về thư viện trong madmom, em đang cố gắng fix l
 
 ![image](https://github.com/user-attachments/assets/4c064b61-f0b6-44f8-9fa0-927ca40a81f3)
 
-Thì bên cạnh đó thì em sử dụng librosa riêng (không kết hợp với madmom) thì nó có tracking được beat (downbeat thì cần phải sử dụng thêm madmom để xác định nhưng hiện tại em chưa fix lỗi hoàn tất). Em có code và chạy thử thì ra kết quả như sau:
+Thì bên cạnh đó thì em sử dụng librosa riêng (không kết hợp với madmom) thì nó có tracking được beat (downbeat thì cần phải sử dụng thêm madmom để xác định nhưng hiện tại em chưa fix lỗi hoàn tất). Em có code và chạy thử thì ra kết quả như sau (code được kèm theo trong link trên):
 
 ![image](https://github.com/user-attachments/assets/661e132e-664d-4bf8-b799-230d07f2b301)
 
 ![image](https://github.com/user-attachments/assets/7565684e-5330-4f31-8a74-c755c628b1a8)
 
 
+
+Em có thử phần chạy lại phần code Beat Transformer đã nêu ở phần research trên để coi thử có thể phương án tốt hơn hay không nhưng vẫn bị lỗi đụng độ madmom và spleeter.
+
+link code của tác giả: https://colab.research.google.com/drive/1IdrpMO1AivWmy-Bm8ktmMy14ED9jllux?usp=sharing#scrollTo=6bhHEe7zba90
 
 
 
